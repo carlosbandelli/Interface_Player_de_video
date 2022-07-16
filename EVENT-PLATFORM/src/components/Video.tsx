@@ -4,20 +4,7 @@ import { CaretRight, DiscordLogo, FileArrowDown, Lightning } from "phosphor-reac
 import '@vime/core/themes/default.css'
 import { gql, useQuery } from "@apollo/client";
 
-const GET_LESSON_BY_SLUG_QUERY = gql `
-  query GetLessonBySlug($slug: String) {
-    lesson(where: {slug: $slug}) {
-      title
-      videoId
-      description
-      teacher {
-        avatarURL
-        bio
-        name
-      }
-    }
-  }
-`
+
 
 interface GetLessonBySlugResponse {
   lesson: {
